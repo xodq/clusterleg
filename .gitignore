@@ -1,3 +1,5 @@
+# tunes stay local - never uploaded
+tunes/
 # firmware dumps and anything read from a car stay local
 *.bin
 cluster_coding_backup_*.txt
