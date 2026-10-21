@@ -65,7 +65,8 @@ CREDITS = [
      "most of the credit goes here. the engine and transmission flashing, unlock, logging and dtc tools "
      "this deck runs are vw_flash, by brian ledbetter (bri3d) and contributors."),
     ("clusterleg", "https://github.com/xodq",
-     "cluster tools, sport layout, feature profiles and this deck - partial work on top of vw_flash, "
+     "cluster long coding (read, backup, write, restore to stock), sport layout, feature profiles and this deck "
+     "- partial work on top of vw_flash, "
      "by xodq (aka xoddx)."),
     ("esp32-isotp-ble-bridge", "https://github.com/bri3d/esp32-isotp-ble-bridge",
      "the bridge firmware that turns a cheap esp32 into the usb/ble interface vw_flash talks through."),

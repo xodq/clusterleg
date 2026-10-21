@@ -120,7 +120,7 @@ The tests run against a simulated cluster (`tests/fake_cluster.py`), so no car i
 
 **Most of the credit goes to [VW_Flash](https://github.com/bri3d/VW_Flash)** by Brian Ledbetter (bri3d) and contributors. All the engine and transmission flashing, unlocking, logging and DTC work this project runs is theirs; the bridge transport in `clusterleg/bridge.py` is adapted from it (BSD-2). Go check it out and star it.
 
-The cluster tools and the deck are partial work added on top by [**xodq**](https://github.com/xodq) (aka xoddx).
+Partial work added on top by [**xodq**](https://github.com/xodq) (aka xoddx): the cluster long-coding tool (read, backup, byte/bit write, restore to stock, with the VW coding login), the sport layout, the feature profiles, the mileage scan and the deck.
 
 - [VW_Flash](https://github.com/bri3d/VW_Flash): flashing, unlock, logging, DTCs
 - [esp32-isotp-ble-bridge](https://github.com/bri3d/esp32-isotp-ble-bridge): the ESP32 bridge firmware VW_Flash talks through

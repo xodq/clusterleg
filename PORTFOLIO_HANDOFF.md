@@ -20,7 +20,7 @@ A command deck and instrument-cluster toolkit for Audi/VW MQB cars, built on top
 ## What xodq built (accurate claims only)
 
 - **Got a DIY bridge talking to the instrument cluster.** The stock ESP32 bridge firmware hard-codes four CAN links and silently drops cluster traffic. xodq dumped the firmware, found the two instructions that set an unused link's CAN IDs, retargeted them to the cluster (0x714/0x77E), and fixed the ESP32 image checksum and SHA-256 so it boots. This is a binary patch with no source rebuild. (The tool prepares the patched image but deliberately never flashes the bridge itself.)
-- **Worked out the cluster's coding protocol.** The first coding writes were refused (UDS NRC 0x24). The fix was VW's "coding login" order: workshop code (F198), then date (F199), then the coding.
+- **Built the cluster long-coding tool.** It reads the coding, saves a backup, changes one byte or one bit, verifies by reading back, and restores stock from the backup. The first writes were refused (UDS NRC 0x24); xodq worked out VW's "coding login" order: workshop code (F198), then date (F199), then the coding. That tool became the base for the feature profiles.
 - **Turned on the Virtual Cockpit S sport layout** on his own 2017 A3. The setting isn't in long coding; it's a byte in cluster memory, written after a development-session login. xodq captured OBDeleven's traffic with a passive listener he wrote, matched it to the published procedure, and re-implemented it. It worked on cluster software 0045, although the guides say 0069+ is needed. That's a genuine new data point.
 - **Built a dark "ops deck" GUI (tkinter)** that wraps every VW_Flash action plus the cluster tools:
   - every button builds an editable command line
