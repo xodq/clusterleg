@@ -1,0 +1,9 @@
+# firmware dumps and anything read from a car stay local
+*.bin
+cluster_coding_backup_*.txt
+listen_*.txt
+__pycache__/
+*.egg-info/
+build/
+dist/
+.venv/

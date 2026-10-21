@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "clusterleg"
+version = "0.1.0"
+description = "Audi/VW instrument cluster tools (coding, Virtual Cockpit sport layout) for the ESP32 ISO-TP bridge"
+readme = "README.md"
+license = { text = "BSD-2-Clause" }
+authors = [{ name = "xodq" }]
+requires-python = ">=3.9"
+dependencies = ["udsoncan>=1.15", "pyserial>=3.5", "esptool>=4.5"]
+
+[project.scripts]
+clusterleg = "clusterleg.cli:main"
+
+[tool.setuptools]
+packages = ["clusterleg"]
